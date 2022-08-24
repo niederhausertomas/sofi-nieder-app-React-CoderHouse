@@ -9,7 +9,7 @@ function App() {
 
   return (
     <div className="container">
-      <h1 className='col-md-4 offset-md-2'>Sofi Nieder Deco </h1>
+      <h1 className='col-md-4 offset-md-2'>Sofi Nieder Deco! </h1>
         <div className='row' >
           <div className='col-md-3 offset-md-2'>
             <img src={imagen} alt={titulo} className="img-fluid" />
