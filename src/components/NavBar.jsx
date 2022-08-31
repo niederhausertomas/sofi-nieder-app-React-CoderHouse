@@ -1,12 +1,13 @@
 import React from "react";
-import logo from "../assets/images/logosofinieder.jpg";
+import CartWidget from "./CartWidget";
 
 const NavBar = ()=>{
     return (
     <div className="container">
         <nav className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#logo"> <img src={logo} id="logo" alt="logo de Sofi Nieder"/> Sofi Nieder Deco</a>
+                <a className="navbar-brand" href="#logo"> 
+                <CartWidget />Sofi Nieder Deco</a>
                 <button id="iconoCarrito" className="bg-dark" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-basket2" viewBox="0 0 16 16">
                         <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>

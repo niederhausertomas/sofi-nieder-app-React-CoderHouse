@@ -9,7 +9,7 @@ import producto6 from "../assets/images/producto6.jpg";
 const Cards = ()=>{
     return (
     <div>
-        <h1 className="titulo">Productos</h1>
+        <h2 className="titulo">Productos</h2>
         <div className="cards d-flex align-items-center d-flex justify-content-evenly">    
             <div className="card col-6 col-sm-3">
                 <img src={producto1} className="card-img-top" alt="..."/>
