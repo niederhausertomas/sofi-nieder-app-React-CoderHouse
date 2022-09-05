@@ -5,8 +5,14 @@ import producto3 from "../assets/images/producto3.jpg";
 import producto4 from "../assets/images/producto4.jpg";
 import producto5 from "../assets/images/producto5.jpg";
 import producto6 from "../assets/images/producto6.jpg";
+import ItemCount from "./ItemCount";
 
 const Cards = ()=>{
+
+    const onAdd = (cantidad)=>{
+        console.log(`se agrego ${cantidad} `)
+    }
+
     return (
     <div>
         <h2 className="titulo">Productos</h2>
@@ -16,6 +22,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
                 </div>
             </div>
             <div className="card col-6 col-sm-3">
@@ -23,6 +31,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
                 </div>
             </div>
             <div className="card col-6 col-sm-3">
@@ -30,6 +40,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />                
                 </div>
             </div>
             <div className="card col-6 col-sm-3">
@@ -37,6 +49,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
                 </div>
             </div>
             <div className="card col-6 col-sm-3">
@@ -44,6 +58,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
                 </div>
             </div>
             <div className="card col-6 col-sm-3">
@@ -51,6 +67,8 @@ const Cards = ()=>{
                 <div className="card-body">
                     <h5 className="card-title">Card title</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <hr/>
+                    <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
                 </div>
             </div>
         </div>
