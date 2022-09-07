@@ -1,11 +1,12 @@
 import React from "react";
-import producto1 from "../assets/images/producto1.jpg";
-import producto2 from "../assets/images/producto2.jpg";
-import producto3 from "../assets/images/producto3.jpg";
-import producto4 from "../assets/images/producto4.jpg";
-import producto5 from "../assets/images/producto5.jpg";
-import producto6 from "../assets/images/producto6.jpg";
-import ItemCount from "./ItemCount";
+import './Cards.css';
+import producto1 from "../../assets/images/producto1.jpg";
+import producto2 from "../../assets/images/producto2.jpg";
+import producto3 from "../../assets/images/producto3.jpg";
+import producto4 from "../../assets/images/producto4.jpg";
+import producto5 from "../../assets/images/producto5.jpg";
+import producto6 from "../../assets/images/producto6.jpg";
+import ItemCount from "../ItemCount/ItemCount";
 
 const Cards = ()=>{
 
@@ -16,6 +17,7 @@ const Cards = ()=>{
     return (
     <div>
         <h2 className="titulo">Productos</h2>
+        <hr />
         <div className="cards d-flex align-items-center d-flex justify-content-evenly">    
             <div className="card col-6 col-sm-3">
                 <img src={producto1} className="card-img-top" alt="..."/>

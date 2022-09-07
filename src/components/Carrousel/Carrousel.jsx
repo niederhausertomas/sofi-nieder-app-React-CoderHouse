@@ -1,10 +1,11 @@
 import React from "react";
-import producto1 from "../assets/images/producto1.jpg";
-import producto2 from "../assets/images/producto2.jpg";
-import producto3 from "../assets/images/producto3.jpg";
-import producto4 from "../assets/images/producto4.jpg";
-import producto5 from "../assets/images/producto5.jpg";
-import producto6 from "../assets/images/producto6.jpg";
+import './Carrousel.css';
+import producto1 from "../../assets/images/producto1.jpg";
+import producto2 from "../../assets/images/producto2.jpg";
+import producto3 from "../../assets/images/producto3.jpg";
+import producto4 from "../../assets/images/producto4.jpg";
+import producto5 from "../../assets/images/producto5.jpg";
+import producto6 from "../../assets/images/producto6.jpg";
 
 const Carrousel = ()=>{
     return (

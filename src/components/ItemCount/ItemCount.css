@@ -1,0 +1,34 @@
+/*ItemCount*/
+
+.Agregar{
+    width: 100%;
+    height: 10%;
+    background-color: rgb(42, 44, 44);
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+}
+.Agregar:hover{
+  border: 1px solid black;
+}
+
+.containerButton{
+  display: flex;
+  margin: auto;
+  margin-left: 25%;
+  width: 30%;
+  height: 40%;
+}
+
+.Boton1{
+  margin: auto;
+  padding: 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+label{
+  padding: 1rem;
+  font-size: 2rem;
+}
