@@ -2,6 +2,7 @@ import './App.css';
 import AboutUs from './components/AboutUs/AboutUs';
 import Carrousel from './components/Carrousel/Carrousel';
 import Footer from './components/Footer/Footer';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 
@@ -14,6 +15,8 @@ function App() {
       <Carrousel />
       <hr />
       <ItemListContainer muebles="Muebles, silloncitos, espejos, almohadones y mas. Envios a todo el pais" productos="productos" />
+      <hr />
+      <ItemDetailContainer />
       <hr />
       <AboutUs />
       <hr />

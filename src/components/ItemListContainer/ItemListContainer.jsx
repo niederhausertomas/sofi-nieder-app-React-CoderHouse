@@ -18,10 +18,7 @@ const ItemListContainer = ()=>{
 
     return (
         <div>
-            {
-            loading
-            ?
-            <h1 className="cargando">CARGANDO...</h1>
+            {loading ? <h1 className="cargando">CARGANDO...</h1>
             :
             <div>
             <h2 className="titulo">PRODUCTOS</h2>
