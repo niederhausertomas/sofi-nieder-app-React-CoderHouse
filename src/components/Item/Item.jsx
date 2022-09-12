@@ -9,10 +9,9 @@ const Item = ({prod})=>{
     }
 
     return (
-    <div>
-        <div className="cards d-flex align-items-center d-flex justify-content-evenly">    
+        <div>    
             <div className="card col-6 col-sm-3">
-                <img src={prod.imgagen} className="card-img-top" alt={prod.nombre}/>
+                <img src={prod.imagen} className="card-img-top" alt={prod.nombre}/>
                 <div className="card-body">
                     <h5 className="card-title">{prod.nombre}</h5>
                     <p className="card-text"> $ {prod.precio}</p>
@@ -21,7 +20,6 @@ const Item = ({prod})=>{
                 </div>
             </div>
         </div>
-    </div>
     )
 }
 export default Item;

@@ -11,8 +11,9 @@ function App() {
       <NavBar />
       <br />
       <hr />
-      <ItemListContainer muebles="Muebles, silloncitos, espejos, almohadones y mas. Envios a todo el pais" productos="productos" />
       <Carrousel />
+      <hr />
+      <ItemListContainer muebles="Muebles, silloncitos, espejos, almohadones y mas. Envios a todo el pais" productos="productos" />
       <hr />
       <AboutUs />
       <hr />

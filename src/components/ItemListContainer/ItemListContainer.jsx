@@ -9,12 +9,12 @@ const ItemListContainer = ()=>{
     const [Productos, setProductos] = useState([])
     const [loading, setLoading ] = useState(true)
 
-    useEffect(()=>(
+    useEffect(()=>{
         getFetch
         .then((respuesta)=>setProductos(respuesta))
         .catch(err=>console.log(err))
         .finally(()=> setLoading(false))
-    ),[])
+},[])
 
     return (
         <div>
@@ -24,7 +24,8 @@ const ItemListContainer = ()=>{
             <h1 className="cargando">CARGANDO...</h1>
             :
             <div>
-            <h1 className="titulo">PRODUCTOS</h1>
+            <h2 className="titulo">PRODUCTOS</h2>
+            <hr />
             <div className="lista">
             <ItemList Prod = {Productos}/>
             </div>

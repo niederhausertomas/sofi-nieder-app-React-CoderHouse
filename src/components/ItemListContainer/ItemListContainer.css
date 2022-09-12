@@ -6,3 +6,10 @@
     color: rgb(179, 170, 170);
     font-size: x-large;
   }
+
+  .lista{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-evenly;
+  }
