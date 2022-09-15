@@ -1,14 +1,17 @@
 import React from "react";
 import './NavBar.css';
 import CartWidget from "../CartWidget/CartWidget";
+import {NavLink} from "react-router-dom";
 
 const NavBar = ()=>{
     return (
     <div className="container">
         <nav className="navbar navbar-dark bg-dark fixed-top">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#logo"> 
-                <CartWidget /> Sofi Nieder Deco</a>
+                <NavLink to={`/`} className="navbar-brand">
+                    <CartWidget /> Sofi Nieder Deco
+                </NavLink>
+
                 <button id="iconoCarrito" className="bg-dark" href="#">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" className="bi bi-basket2" viewBox="0 0 16 16">
                         <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
@@ -26,13 +29,14 @@ const NavBar = ()=>{
                     <div className="offcanvas-body">
                         <ul className="navbar-nav justify-content-end flex-grow-1 pe-3">
                             <li className="nav-item">
-                                <a className="nav-link active" aria-current="page" href="#carouselExampleControls">Home</a>
+                                <NavLink to={`/`} className="nav-link active">
+                                Home
+                                </NavLink>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="#productos">Productos</a>
-                            </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="#productos">About us</a>
+                                <NavLink to={`/category/1`} className="nav-link active">
+                                About us
+                                </NavLink>
                             </li>
                         </ul>
                     </div>

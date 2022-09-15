@@ -9,7 +9,10 @@ import producto6 from "../../assets/images/producto6.jpg";
 
 const Carrousel = ()=>{
     return (
+
 <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
+        <br />
+        <hr />
   <div className="carousel-inner">
     <div className="carousel-item active">
       <img src={producto1} className="d-block fCarrousel" alt="imagen del producto 1"/>

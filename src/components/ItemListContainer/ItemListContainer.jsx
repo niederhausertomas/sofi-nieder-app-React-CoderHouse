@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {getFetch} from "../../Mock";
+import Carrousel from "../Carrousel/Carrousel";
 import ItemList from "../ItemList/ItemList";
 import './ItemListContainer.css';
 
@@ -16,8 +17,11 @@ const ItemListContainer = ()=>{
         .finally(()=> setLoading(false))
 },[])
 
+
     return (
         <div>
+            <Carrousel />
+             <hr />
             {loading ? <h1 className="cargando">CARGANDO...</h1>
             :
             <div>

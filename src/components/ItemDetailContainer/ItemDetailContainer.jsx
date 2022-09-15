@@ -1,3 +1,5 @@
+
+import {useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {getFetch} from "../../Mock";
 import './ItemDetailContainer.css';
@@ -9,9 +11,11 @@ const ItemDetailContainer = ()=>{
     const [producto, setProducto] = useState([])
     const [loading, setLoading ] = useState(true)
 
+    const {id} = useParams();
+
     useEffect(()=>{
         getFetch
-        .then((respuesta)=>setProducto(respuesta.find(prod=>prod.Id === 1)))
+        .then((respuesta)=>setProducto(respuesta.find(prod=>prod.Id === id)))
         .finally(()=> setLoading(false))
 },[])
     
