@@ -35,6 +35,26 @@ const NavBar = ()=>{
                             </li>
                             <li className="nav-item">
                                 <NavLink to={`/category/1`} className="nav-link active">
+                                Muebles
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to={`/category/2`} className="nav-link active">
+                                Almohadones
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to={`/category/3`} className="nav-link active">
+                                Percheros
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to={`/category/4`} className="nav-link active">
+                                Espejos
+                                </NavLink>
+                            </li>
+                            <li className="nav-item">
+                                <NavLink to={`/category/5`} className="nav-link active">
                                 About us
                                 </NavLink>
                             </li>
