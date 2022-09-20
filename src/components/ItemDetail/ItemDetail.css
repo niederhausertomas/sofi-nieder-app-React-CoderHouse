@@ -1,5 +1,14 @@
-.card{
-    width: 44rem;
-    margin: 20px;
+.cardo{
+    width:100%;
+    margin: 30px;
     text-align: center;
+  }
+
+  .imagenn{
+    width: 450px;
+  }
+
+  .tituloCard{
+    margin: 15px;
+    font-size: 25px;
   }

@@ -1,14 +1,14 @@
 /*ItemCount*/
 
 .Agregar{
-    width: 100%;
+    width: 40%;
     height: 50px;
     background-color: rgb(42, 44, 44);
     border: none;
     padding: 1rem;
     border-radius: 1rem;
     color: white;
-    margin-top: 5px;
+    margin-top: 25px;
     margin-bottom: 0px;
     text-align: center;
     padding: auto;
@@ -21,13 +21,13 @@
 .containerButton{
   display: flex;
   margin: auto;
-  margin-left: 25%;
-  width: 60%;
+  margin-top: 100px;
+  width: 30%;
   height: 90px;
 }
 
 .Boton1{
-  margin: 5px;
+  margin: auto;
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
