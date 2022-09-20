@@ -3,36 +3,41 @@ import {useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {getFetch} from "../../Mock";
 import './ItemCategoriaContainer.css';
-import ItemDetail from "../ItemDetail/ItemDetail";
+import ItemList from "../ItemList/ItemList";
+
+
 
 
 const ItemCategoriaContainer = ()=>{
+ 
+const [Productos, setProductos] = useState([])
+const [loading, setLoading ] = useState(true)
 
-    const [producto, setProducto] = useState([])
-    const [loading, setLoading ] = useState(true)
+const {categoria} = useParams();
+useEffect(()=>{
+    getFetch
+    .then ((respuesta)=>{const productosArray= respuesta.filter(prod=>prod.categoria === categoria); 
+        setProductos(productosArray);
+    })
+    .finally(()=> setLoading(false))
+},[categoria])
 
-    const {categoria} = useParams();
-
-    useEffect(()=>{
-        getFetch
-        .then((respuesta)=>setProducto(respuesta.find(prod=>prod.categoria === categoria)))
-        .finally(()=> setLoading(false))
-},[])
-    
-    return (
+return (
+    <div>
+       
+         <hr />
+        {loading ? <h1 className="cargando">CARGANDO...</h1>
+        :
         <div>
-            {loading ? <h2 className="cargando">CARGANDO...</h2>
-            :
-            <div>
-            <h2 className="titulo">{producto.categoria}</h2>
-            <hr />
-            <div className="itemdetail">
-            <ItemDetail producto = {producto}/>
-            </div>
-            </div>
-            }
+        <h2 className="titulo">PRODUCTOS</h2>
+        <hr />
+        <div className="lista">
+        <ItemList Prod = {Productos}/>
         </div>
-    )
+        </div>
+        }
+    </div>
+)
 }
 
 export default ItemCategoriaContainer

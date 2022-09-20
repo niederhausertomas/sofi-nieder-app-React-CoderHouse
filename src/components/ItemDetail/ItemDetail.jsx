@@ -12,8 +12,7 @@ const ItemDetail = ({producto})=>{
             <div className="card-body">
                 <h5 className="card-title">{producto.nombre}</h5>
                 <p className="card-text"> $ {producto.precio}</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem distinctio saepe ipsa, unde eaque atque, sapiente voluptatum esse nemo excepturi officia laboriosam repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
-                <hr/>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
                 <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
             </div>
         </div>

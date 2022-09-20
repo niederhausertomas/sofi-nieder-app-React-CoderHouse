@@ -49,11 +49,3 @@ export const getFetch = new Promise((respuesta, rejected)=>{
     }
 }
     )
-/*
-export const getProductoById = (id) =>{
-    return new Promise ((resolve) =>{
-        setTimeout(()=>{
-            resolve(productos.find(prod => prod.id === id))
-        }, 500)
-    })
-}*/

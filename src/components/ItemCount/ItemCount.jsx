@@ -22,16 +22,12 @@ const ItemCount = ({stock, initial, onAdd})=>{
 
     return (
         <>
-        <div className="containerButton">
-            <div className="Boton1" onClick={restar}> - </div>
-
-            <label> {count} </label>
-
-            <div className="Boton1" onClick={sumar}> + </div>
-        </div>
-            <button className="Agregar" onClick={AgregarCantidad}> AGREGAR AL CARRITO </button>
-        
-        
+            <div className="containerButton">
+                <div className="Boton1" onClick={restar}> - </div>
+                    <label> {count} </label>
+                <div className="Boton1" onClick={sumar}> + </div>
+            </div>
+                <button className="Agregar" onClick={AgregarCantidad}> AGREGAR AL CARRITO </button>
         </>
     )
 }

@@ -17,7 +17,7 @@ const ItemDetailContainer = ()=>{
         getFetch
         .then((respuesta)=>setProducto(respuesta.find(prod=>prod.Id === id)))
         .finally(()=> setLoading(false))
-},[])
+},[id])
     
     return (
         <div>
