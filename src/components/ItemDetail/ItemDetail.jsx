@@ -7,16 +7,6 @@ const ItemDetail = ({producto})=>{
         console.log(`se agrego ${cantidad} `)
     }
     return (   
-     /*   <div className="cardo">
-            <img src={producto.imagen} className="card-img-top" alt={producto.nombre}/>
-            <div className="card-body">
-                <h5 className="card-title">{producto.nombre}</h5>
-                <p className="card-text"> $ {producto.precio}</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
-                <ItemCount stock = {5} initial = {1} onAdd = {onAdd} />
-            </div>
-        </div>*/
-
         <div className="cardo mb-3" >
             <div className="row g-0">
                 <div className="imagenn col-md-4">
