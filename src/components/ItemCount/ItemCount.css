@@ -8,7 +8,7 @@
     padding: 1rem;
     border-radius: 1rem;
     color: white;
-    margin-top: 25px;
+    margin-top: 10px;
     margin-bottom: 0px;
     text-align: center;
     padding: auto;
@@ -21,13 +21,14 @@
 .containerButton{
   display: flex;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 0px;
   width: 30%;
   height: 90px;
 }
 
 .Boton1{
   margin: auto;
+
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
