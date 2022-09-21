@@ -12,3 +12,19 @@
     margin: 15px;
     font-size: 25px;
   }
+  .detailCompra{
+    text-decoration: none;
+    width: 40%;
+    height: 50px;
+    background-color: rgb(42, 44, 44);
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    margin-top: 130px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
+  .descripcionCard{
+    margin-bottom: 50px;
+  }
