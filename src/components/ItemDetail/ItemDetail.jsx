@@ -18,26 +18,24 @@ const ItemDetail = ({producto})=>{
     return (   
         <div className="cardo mb-3" >
             <div className="row g-0">
-                <div className="imagenn col-md-4">
+                <div className="imagenn col-md-8">
                     <img src={producto.imagen} className="img-fluid rounded-start" alt="..."/>
                 </div>
-                <div className="col-md-8">
+                <div className="col-md-4">
                     <div className="card-body">
-                    <h5 className="tituloCard">{producto.nombre}</h5>
-                    <p className="tituloCard"> Precio $ {producto.precio}</p>
-                    <p className="descripcionCard">Lorem ipsum dolor sit amet consectetur adipisicing elit.  repellendus dolorum fuga totam voluptate delectus dolore deleniti.<br/>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.  repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
-                    
-                    {
-                        carrito?(
-                            <Link to={`/Cart/${cant}`} className="detailCompra">
-                                Terminar mi compra
-                            </Link>
-                        ) : (
-                            <ItemCount stock = {producto.cantidad} carrito = {onAdd} />
-                        )
-                    
-                    }
+                        <h5 className="tituloCard">{producto.nombre}</h5>
+                        <p className="tituloCard"> Precio $ {producto.precio}</p>
+                        <p className="descripcionCard">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
+                        </div>{
+                            carrito?(
+                                <Link to={`/Cart/${cant}`} className="detailCompra">
+                                    Terminar mi compra
+                                </Link>
+                            ) : (
+                                <ItemCount stock = {producto.cantidad} carrito = {onAdd} />
+                            )
+                        }
+                        <div>
                     </div>
                 </div>
             </div>
