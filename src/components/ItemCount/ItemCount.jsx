@@ -16,7 +16,7 @@ const ItemCount = ({stock, carrito})=>{
         <>
             <div className="containerButton">
                 <button className="Boton1" onClick={restar}> - </button>
-                    <span> {contador} </span>
+                    <span style={{ fontSize : '24px' }}> {contador} </span>
                 <button className="Boton1" onClick={sumar}> + </button>
             </div>
 
