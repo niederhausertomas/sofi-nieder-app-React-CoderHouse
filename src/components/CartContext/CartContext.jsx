@@ -18,7 +18,7 @@ const CartProvider = (props)=>{
             setCart([...cart, {...item, cantidadCompra:quantity}]);
         };
     }
-    
+     
     console.log(cart)
 
     return (
