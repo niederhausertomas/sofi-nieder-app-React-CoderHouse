@@ -9,13 +9,12 @@ import { CartContext } from "../CartContext/CartContext";
 const ItemDetail = ({producto})=>{
     
     const [carrito, setCarrito] = useState(false);
-    const valores = useContext(CartContext);
-    const {addToCart} = useContext(CartContext);
+    const {addItem} = useContext(CartContext);
 
     const [cant, setCant] = useState(0);
 
     const onAdd = (data) =>{
-        addToCart(data, producto);
+        addItem(data, producto);
         setCant(data);
         setCarrito(true);
     }

@@ -3,7 +3,7 @@ import {useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
 import {getFetch} from "../../Mock";
 import './ItemCategoriaContainer.css';
-import ItemCategoria from "../ItemCategoria/ItemCategoria";
+import ItemList from    "../ItemList/ItemList"
 
 
 
@@ -32,7 +32,7 @@ return (
         <h2 className="titulo">PRODUCTOS</h2>
         <hr />
         <div className="lista">
-        <ItemCategoria Prod = {Productos}/>
+        <ItemList Prod = {Productos}/>
         </div>
         </div>
         }
