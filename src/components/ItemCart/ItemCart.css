@@ -1,0 +1,28 @@
+.shoppingContainer{
+    margin: auto;
+    margin-top: 30px;
+    align-items: center;
+    display: flex;
+    height: 150px;
+    width: 70%;
+    border: 2px solid black;
+}
+
+.imageBox{
+    height: 150px;
+    width: 150px;
+    display: flex;
+    border: 2px solid black;
+    object-fit: contain;
+}
+
+.cartContent{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.productInfo{
+    font-size: 20px;
+    margin: 20px;
+}

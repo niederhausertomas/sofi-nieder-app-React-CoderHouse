@@ -1,0 +1,28 @@
+.EmptyCart{
+    margin-top: 110px;
+    margin-bottom: 60px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.ProductsLink{
+    text-decoration: none;
+    width: 50%;
+    height: 50px;
+    background-color: rgb(42, 44, 44);
+    border: none;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: white;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.ProductsLink:hover{
+    border: 1px solid black;
+    color: white;
+  }
+
+.CartInfo{
+    text-align: center;
+}

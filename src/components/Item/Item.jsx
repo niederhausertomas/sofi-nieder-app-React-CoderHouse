@@ -15,7 +15,7 @@ const Item = ({prod})=>{
                     <p className="card-text"> $ {prod.precio}</p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.  repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>   
                     <NavLink to={`/item/${parseInt(prod.Id)}`}>
-                        <button className="Agregar" /*onClick={AgregarCantidad}*/> Ver </button>
+                        <button className="Agregar"> Ver </button>
                     </NavLink>
                 </div>
             </div>

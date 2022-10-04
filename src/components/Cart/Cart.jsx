@@ -1,11 +1,50 @@
 import React from "react";
+import './Cart.css';
+import { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../CartContext/CartContext";
+import { ItemCart } from "../ItemCart/ItemCart"
 
 const Cart = ()=>{
-    return (
-        <div>
-            <h2 className="titulo">About us!</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia suscipit quia unde praesentium quis ut possimus sed error, aut vero corrupti dolore? Error aliquid, odio itaque quibusdam ipsum incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam enim libero fugit veritatis culpa porro, eligendi voluptate quisquam autem perspiciatis quidem pariatur tenetur tempore molestiae perferendis impedit. Veritatis, quasi ipsam!Lorem ipsum dolor sit amet consectetur adipisicing elit. A officia suscipit quia unde praesentium quis ut possimus sed error, aut vero corrupti dolore? Error aliquid, odio itaque quibusdam ipsum incidunt. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam enim libero fugit veritatis culpa porro, eligendi voluptate quisquam autem perspiciatis quidem pariatur tenetur tempore molestiae perferendis impedit. Veritatis, quasi ipsam!</p>
-        </div>
-    )
+    const{cart}= useContext(CartContext);
+    const{precioTotal}= useContext(CartContext);
+    console.log(cart)
+    
+    if (cart.length === 0) {
+        return (
+            <div className="CartInfo">
+                <ItemCart />
+                <p className="EmptyCart">Your cart is empty</p>
+                <Link className="ProductsLink" to="/">Look for our products</Link>
+            </div>
+        )} else{      
+            return (
+                <>
+                    <br/>
+                    <br/>
+                    <br/>
+                   {
+                      cart.map(product => <ItemCart key={product.id} product={product} />) 
+                   }
+                   <p className="Total-price">Total: ${ precioTotal() }</p>
+                   <button className="Checkout-button">Proceed to checkout</button>
+                </>
+              );}
+
+/*import ItemCart from "./ItemCart";
+
+const Cart = () => {
+   
+	return (
+      <>
+         {
+            cart.map(product => <ItemCart key={product.id} product={product} />) 
+         }
+         <p className="Total-price">Total: ${ totalPrice() }</p>
+		 <button className="Checkout-button">Proceed to checkout</button>
+      </>
+	);
+}; */
+
 }
 export default Cart;

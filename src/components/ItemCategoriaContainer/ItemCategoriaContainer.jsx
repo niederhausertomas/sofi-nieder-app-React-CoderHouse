@@ -4,12 +4,13 @@ import React, { useEffect, useState } from "react";
 import {getFetch} from "../../Mock";
 import './ItemCategoriaContainer.css';
 import ItemList from    "../ItemList/ItemList"
+import Loading from "../Loading/Loading";
 
 
 
 
 const ItemCategoriaContainer = ()=>{
- 
+
 const [Productos, setProductos] = useState([])
 const [loading, setLoading ] = useState(true)
 
@@ -26,7 +27,7 @@ return (
     <div>
        
          <hr />
-        {loading ? <h1 className="cargando">CARGANDO...</h1>
+        {loading ? <h1 className="cargando"><Loading /> </h1>
         :
         <div>
         <h2 className="titulo">PRODUCTOS</h2>

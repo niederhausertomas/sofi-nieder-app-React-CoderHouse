@@ -32,9 +32,9 @@ const ItemDetail = ({producto})=>{
                         <p className="descripcionCard">Lorem ipsum dolor sit amet consectetur adipisicing elit. <br/> repellendus dolorum fuga totam voluptate delectus dolore deleniti.</p>
                         </div>{
                             carrito?(
-                                <Link to={`/Cart/${cant}`} className="detailCompra">
-                                    Terminar mi compra
-                                </Link>
+                                    <Link to={`/Cart`} className="detailCompra">
+                                        Terminar mi compra
+                                    </Link >
                             ) : (
                                 <ItemCount stock = {producto.cantidad} carrito = {onAdd} />
                             )
