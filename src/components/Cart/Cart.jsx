@@ -7,9 +7,14 @@ import { ItemCart } from "../ItemCart/ItemCart"
 
 const Cart = ()=>{
     const{cart}= useContext(CartContext);
-    const{precioTotal}= useContext(CartContext);
-    console.log(cart)
-    
+    let total=0;
+    function totalCompra(cart){
+        for(const product of cart){    
+            total+= product.cantidadCompra * product.precio;
+        }
+        return total;
+    }
+
     if (cart.length === 0) {
         return (
             <div className="CartInfo">
@@ -26,7 +31,7 @@ const Cart = ()=>{
                    {
                       cart.map(product => <ItemCart key={product.id} product={product} />) 
                    }
-                   <p className="Total-price">Total: ${ precioTotal() }</p>
+                   <p className="Total-price">Total: ${ totalCompra(cart) }</p>
                    <button className="Checkout-button">Proceed to checkout</button>
                 </>
               );}
