@@ -9,20 +9,20 @@ const Cart = ()=>{
     const{cart}= useContext(CartContext);
     let total=0;
     function totalCompra(cart){
+        console.log("Est[a ingresando!")
         for(const product of cart){    
             total+= product.cantidadCompra * product.precio;
         }
         return total;
     }
-
+    console.log(cart)
     if (cart.length === 0) {
         return (
             <div className="CartInfo">
-                <ItemCart />
-                <p className="EmptyCart">Your cart is empty</p>
-                <Link className="ProductsLink" to="/">Look for our products</Link>
+                <p className="EmptyCart">No hay productos en el Carrito</p>
+                <Link className="ProductsLink" to="/">Ver nuestros productos</Link>
             </div>
-        )} else{      
+        )} else if (cart.length !== 0){      
             return (
                 <>
                     <br/>
@@ -35,21 +35,5 @@ const Cart = ()=>{
                    <button className="Checkout-button">Proceed to checkout</button>
                 </>
               );}
-
-/*import ItemCart from "./ItemCart";
-
-const Cart = () => {
-   
-	return (
-      <>
-         {
-            cart.map(product => <ItemCart key={product.id} product={product} />) 
-         }
-         <p className="Total-price">Total: ${ totalPrice() }</p>
-		 <button className="Checkout-button">Proceed to checkout</button>
-      </>
-	);
-}; */
-
 }
 export default Cart;

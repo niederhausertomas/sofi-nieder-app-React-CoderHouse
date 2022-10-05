@@ -16,7 +16,7 @@ export const ItemCart = ({ product }) => {
             <p className='productInfo'>Cantidad: {product.cantidadCompra}</p>
             <p className='productInfo'>Precio por unidad: ${product.precio}</p>
             <div className='deleteContainer'>
-                <button onClick={() => removeItem(product.id)} className='deleteButton'>x</button>
+                <button onClick={() => removeItem(product.Id)} className='deleteButton'>X Borrar Item</button>
             </div>     
         </div> 
     </div>

@@ -8,7 +8,8 @@ const CartProvider = (props)=>{
     const isInCart = (Id) => cart.find(product => product.Id === Id)? true : false;
     const clear = () => setCart([]);
     const removeItem = (Id) => setCart(cart.filter(product => product.Id !== Id));
-    const cartTotal = () => { return cart.reduce((total, item)=> total+=item.cantidadCompra, 0)}
+    const cartTotal = () => { 
+        return cart.reduce((total, item)=> total+=item.cantidadCompra, 0)}
     const precioTotal =  () => { return cart.reduce((pTotal, item)=> pTotal+=item.preco, 0)}
 
     const addItem = (quantity, item) =>{
