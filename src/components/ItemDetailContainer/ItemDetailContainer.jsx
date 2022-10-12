@@ -1,34 +1,38 @@
-
-import {useParams} from "react-router-dom";
 import React, { useEffect, useState } from "react";
-import {getFetch} from "../../Mock";
-import './ItemDetailContainer.css';
+import {useParams} from "react-router-dom";
+import {getFirestore, doc, getDoc} from "firebase/firestore";
 import ItemDetail from "../ItemDetail/ItemDetail";
-
+import Loading from "../Loading/Loading";
+import './ItemDetailContainer.css';
 
 const ItemDetailContainer = ()=>{
-
-    const [producto, setProducto] = useState([])
-    const [loading, setLoading ] = useState(true)
-
     const {id} = useParams();
+    const [producto, setProducto] = useState({});
+    const [loading, setLoading ] = useState(true);
 
     useEffect(()=>{
-        getFetch
-        .then((respuesta)=>setProducto(respuesta.find(prod=>prod.Id === id)))
-        .finally(()=> setLoading(false))
-},[id])
+        const db = getFirestore();
+        const response = doc(db, "Productos", id);
+        getDoc(response).then((snapShot)=>{
+            if(snapShot.exists){
+                console.log(snapShot.data())
+                setProducto({id:snapShot.id, ...snapShot.data()});
+                setLoading(false);
+            }
+        });
+    },[id]);
     
     return (
         <div>
-            {loading ? <h2 className="cargando">CARGANDO...</h2>
-            :
+             <hr />
+             <hr />
+             <hr />
+            {loading ? <Loading/>:
             <div>
-            <h2 className="titulo">Item List Container</h2>
-            <hr />
-            <div className="itemdetail">
-            <ItemDetail producto = {producto}/>
-            </div>
+                <hr />
+                <div className="itemdetail">
+                    <ItemDetail producto = {producto}/>
+                </div>
             </div>
             }
         </div>

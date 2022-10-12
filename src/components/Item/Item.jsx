@@ -8,7 +8,7 @@ const Item = ({prod})=>{
         <div>    
             <div className="card col-6 col-sm-3">
                 <NavLink to={`/item/${parseInt(prod.Id)}`}>
-                    <img src={prod.imagen} className="card-img-top" alt={prod.nombre}/>
+                    <img src={"../../assets/images/" + prod.imagen} className="card-img-top" alt={prod.nombre}/>
                 </NavLink>
                 <div className="card-body">
                     <h5 className="card-title">{prod.nombre}</h5>

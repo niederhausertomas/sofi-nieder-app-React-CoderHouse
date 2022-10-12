@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import {getFetch} from "../../Mock";
+import { useParams } from "react-router-dom";
+import {getFirestore, collection, getDocs} from "firebase/firestore";
 import Carrousel from "../Carrousel/Carrousel";
 import ItemList from "../ItemList/ItemList";
 import Loading from "../Loading/Loading";
@@ -7,18 +8,23 @@ import './ItemListContainer.css';
 
 
 const ItemListContainer = ()=>{
-
-    const [Productos, setProductos] = useState([])
-    const [loading, setLoading ] = useState(true)
-
-
+    const {id}= useParams();
+    const [Productos, setProductos] = useState([]);
+    const [loading, setLoading ] = useState(true);
 
     useEffect(()=>{
-        getFetch
-        .then((respuesta)=>setProductos(respuesta))
-        .catch(err=>console.log(err))
-        .finally(()=> setLoading(false))
-},[])
+        const db = getFirestore();
+        const productosCollections = collection(db, "Productos");
+        getDocs(productosCollections).then((snapShot)=>{
+            if(snapShot.size>0){
+                setProductos(snapShot.docs.map(producto=>({id:producto.id, ...producto.data()})));
+                setLoading(false);
+            }
+        })
+    },[id]);
+
+
+
 
 
     return (
