@@ -5,11 +5,11 @@ import './ItemCart.css';
 
 export const ItemCart = ({ product }) => {
     const{removeItem}= useContext(CartContext);
-
+    console.log(product.imagen)
   return (
      <div className='shoppingContainer'>
         <div className='imageBox'>
-            <img src={product.imagen} alt="Product" />
+            <img src={"images/" + product.imagen} alt="Product" />
         </div>
         <div className='cartContent'>
             <p className='productInfo'>{product.nombre}</p>

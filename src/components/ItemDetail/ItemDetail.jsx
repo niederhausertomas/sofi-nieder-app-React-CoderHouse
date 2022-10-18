@@ -16,14 +16,13 @@ const ItemDetail = ({producto})=>{
         addItem(data, producto);
         setCant(data);
         setCarrito(true);
-        console.log(cant);
     }
 
     return (   
         <div className="cardo mb-3" >
             <div className="row g-0">
                 <div className="imagenn col-md-8">
-                    <img src= {"../../assets/images/" + producto.imagen} className="img-fluid rounded-start" alt="..."/>
+                    <img src= {"../images/" + producto.imagen} className="img-fluid rounded-start" alt="..."/>
                 </div>
                 <div className="col-md-4">
                     <div className="card-body">

@@ -10,12 +10,12 @@ const Footer = ()=>{
                             Home
                     </NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <NavLink to={`/`} className="nav-link active">
                             Home
                     </NavLink>
                 </li>
-                <li class="nav-item">
+                <li className="nav-item">
                     <NavLink to={`/`} className="nav-link active">
                             Home
                     </NavLink>

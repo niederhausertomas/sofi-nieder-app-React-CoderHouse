@@ -1,15 +1,13 @@
 import React from "react";
 import './Item.css';
 import {NavLink} from "react-router-dom";
-import producto1 from "../../assets/images/producto2.jpg"
 
 const Item = ({prod})=>{
-    console.log(prod.imagen)
     return (
         <div>    
             <div className="card col-6 col-sm-3">
                 <NavLink to={`/item/${prod.id}`}>
-                    <img src= {"../../assets/images/" + prod.imagen} className="card-img-top" alt={prod.nombre}/>
+                    <img src= {"images/" + prod.imagen} className="card-img-top" alt={prod.nombre}/>
                 </NavLink>
                 <div className="card-body">
                     <h5 className="card-title">{prod.nombre}</h5>

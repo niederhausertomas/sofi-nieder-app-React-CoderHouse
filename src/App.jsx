@@ -8,6 +8,7 @@ import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailCont
 import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import NavBar from './components/NavBar/NavBar';
 import Cart from './components/Cart/Cart';
+import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
@@ -30,11 +31,12 @@ Una vez tengan lo que vimos andando perfecto, intenten hacer cosas extras que su
       <BrowserRouter>
         <NavBar />
         <Routes className="container-fluid">
-          <Route exact path="/" element={<ItemListContainer productos="productos" />}/>
+          <Route exact path="/" element={<ItemListContainer />}/>
           <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
           <Route exact path="/category/:categoria" element={<ItemCategoriaContainer />}/>
           <Route exact path="/category/5" element={<AboutUs />}/>
           <Route exact path="/Cart" element={<Cart />}/>
+          <Route path={"/checkout"} element={<Checkout />} />
         </Routes>
         <Footer />
       </BrowserRouter>

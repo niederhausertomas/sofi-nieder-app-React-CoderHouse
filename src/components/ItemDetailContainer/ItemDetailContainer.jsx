@@ -31,7 +31,7 @@ const ItemDetailContainer = ()=>{
             <div>
                 <hr />
                 <div className="itemdetail">
-                    <ItemDetail producto = {producto}/>
+                    <ItemDetail key={producto.id} producto = {producto}/>
                 </div>
             </div>
             }
