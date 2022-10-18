@@ -30,7 +30,7 @@ Una vez tengan lo que vimos andando perfecto, intenten hacer cosas extras que su
       <BrowserRouter>
         <NavBar />
         <Routes className="container-fluid">
-          <Route exact path="/" element={<ItemListContainer muebles="Muebles, silloncitos, espejos, almohadones y mas. Envios a todo el pais" productos="productos" />}/>
+          <Route exact path="/" element={<ItemListContainer productos="productos" />}/>
           <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
           <Route exact path="/category/:categoria" element={<ItemCategoriaContainer />}/>
           <Route exact path="/category/5" element={<AboutUs />}/>

@@ -3,6 +3,7 @@
     margin-bottom: 60px;
     font-size: 50px;
     text-align: center;
+    color: rgb(151, 131, 131);
 }
 
 .ProductsLink{
@@ -25,4 +26,31 @@
 
 .CartInfo{
     text-align: center;
+}
+
+.totalycheck{
+    display: flex;
+    margin: auto;
+    width: 70%;
+}
+
+.Total-price{
+    margin: 15px;
+    font-size: 30px;
+    padding: 15px;
+    color: rgb(151, 131, 131);
+}
+
+.Checkout-button{
+    font-size: 25px;
+    height: 50px;
+    padding: 5px;
+    margin: 25px 0 auto 0px;
+    border: 2px solid rgb(180, 166, 166);
+    border-radius: 15px;
+    color: rgb(151, 131, 131);
+}
+
+.Checkout-button:hover{
+    background-color:  rgb(226, 226, 226);
 }

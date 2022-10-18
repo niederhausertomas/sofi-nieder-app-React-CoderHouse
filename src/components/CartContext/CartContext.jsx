@@ -5,17 +5,17 @@ export const CartContext = createContext();
 const CartProvider = (props)=>{
 
     const [cart, setCart] = useState([]);
-    const isInCart = (Id) => cart.find(product => product.Id === Id)? true : false;
+    const isInCart = (id) => cart.find(product => product.id === id)? true : false;
     const clear = () => setCart([]);
-    const removeItem = (Id) => setCart(cart.filter(product => product.Id !== Id));
+    const removeItem = (id) => setCart(cart.filter(product => product.id !== id));
     const cartTotal = () => { 
         return cart.reduce((total, item)=> total+=item.cantidadCompra, 0)}
     const precioTotal =  () => { return cart.reduce((pTotal, item)=> pTotal+=item.preco, 0)}
 
     const addItem = (quantity, item) =>{
-        if (isInCart(item.Id)) {
+        if (isInCart(item.id)) {
             setCart(cart.map(product => {
-               return product.Id === item.Id ? { ...product, cantidadCompra: product.cantidadCompra + quantity } : product;
+               return product.id === item.id ? { ...product, cantidadCompra: product.cantidadCompra + quantity } : product;
             }));
         } else {
            setCart([...cart, {...item, cantidadCompra:quantity}]);

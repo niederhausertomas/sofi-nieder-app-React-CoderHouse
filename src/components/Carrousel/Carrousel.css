@@ -1,7 +1,18 @@
 .fCarrousel{
     margin-top: 50px;
-    width: 90%;
-    height: 595px;
-    margin-left: 5%;
+    width: 70%;
+    height: 550px;
+    margin-left: 15%;
+    margin-right: 15%;
     object-fit: cover;
     }
+
+.carousel-control-next-icon{
+   background-color: rgb(151, 131, 131);
+    border-radius: 50%;
+}
+
+.carousel-control-prev-icon{
+    background-color: rgb(151, 131, 131);
+     border-radius: 50%;
+ }

@@ -38,3 +38,9 @@ label{
   padding: 1rem;
   font-size: 2rem;
 }
+
+.number{
+  width: 200px;
+  font-size: 30px;
+  padding: 20px;
+}

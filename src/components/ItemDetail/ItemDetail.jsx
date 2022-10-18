@@ -16,6 +16,7 @@ const ItemDetail = ({producto})=>{
         addItem(data, producto);
         setCant(data);
         setCarrito(true);
+        console.log(cant);
     }
 
     return (   

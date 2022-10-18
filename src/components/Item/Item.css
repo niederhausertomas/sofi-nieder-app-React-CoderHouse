@@ -4,3 +4,15 @@
   margin: 20px;
   text-align: center;
 }
+
+.card-title{
+  color: rgb(179, 170, 170);
+}
+
+.card-text{
+  color: rgb(179, 170, 170);
+}
+
+.card-body p{
+  color: rgb(179, 170, 170);
+}
