@@ -15,7 +15,6 @@ const ItemDetailContainer = ()=>{
         const response = doc(db, "Productos", id);
         getDoc(response).then((snapShot)=>{
             if(snapShot.exists){
-                console.log(snapShot.data())
                 setProducto({id:snapShot.id, ...snapShot.data()});
                 setLoading(false);
             }

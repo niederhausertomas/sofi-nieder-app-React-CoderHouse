@@ -9,13 +9,11 @@ const Cart = ()=>{
     const{cart}= useContext(CartContext);
     let total=0;
     function totalCompra(cart){
-        console.log("Est[a ingresando!")
         for(const product of cart){    
             total+= product.cantidadCompra * product.precio;
         }
         return total;
     }
-    console.log(cart)
     if (cart.length === 0) {
         return (
             <div className="CartInfo">

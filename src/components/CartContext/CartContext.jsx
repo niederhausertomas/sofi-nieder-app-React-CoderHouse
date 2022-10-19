@@ -15,16 +15,20 @@ const CartProvider = (props)=>{
     const addItem = (quantity, item) =>{
         if (isInCart(item.id)) {
             setCart(cart.map(product => {
-               return product.id === item.id ? { ...product, cantidadCompra: product.cantidadCompra + quantity } : product;
+                return product.id === item.id ? { ...product, cantidadCompra: product.cantidadCompra + quantity } : product;
             }));
         } else {
-           setCart([...cart, {...item, cantidadCompra:quantity}]);
+            setCart([...cart, {...item, cantidadCompra:quantity}]);
         };
+    }
+
+    const cartSuma = () => {
+        return cart.reduce((total, item) => total+=item.cantidadCompra*item.precio, 0);
     }
 
 
     return (
-        <CartContext.Provider value={{cart, addItem, isInCart, clear, removeItem, cartTotal, precioTotal}}>
+        <CartContext.Provider value={{cart, addItem, isInCart, clear, removeItem, cartTotal, precioTotal, cartSuma}}>
             {props.children}
         </CartContext.Provider>
     )

@@ -23,10 +23,6 @@ const ItemListContainer = ()=>{
         })
     },[id]);
 
-
-
-
-
     return (
         <div>
             <Carrousel />
@@ -37,7 +33,7 @@ const ItemListContainer = ()=>{
             <h2 className="titulo">PRODUCTOS</h2>
             <hr />
             <div className="lista">
-            <ItemList Prod = {Productos}/>
+            <ItemList Key={Productos[0].id} Prod = {Productos}/>
             </div>
             </div>
             }

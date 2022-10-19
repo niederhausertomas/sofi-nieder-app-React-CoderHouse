@@ -28,10 +28,16 @@
 
 .Boton1{
   margin: auto;
-
   padding: 1rem;
   font-size: 2rem;
   cursor: pointer;
+  border-radius: 15px;
+  color: rgb(179, 170, 170);
+  border: solid 2px rgb(179, 170, 170);
+}
+
+.Boton1:hover{
+  background-color: rgb(207, 204, 204); ;
 }
 
 label{
@@ -43,4 +49,5 @@ label{
   width: 200px;
   font-size: 30px;
   padding: 20px;
+  color: rgb(179, 170, 170);
 }
