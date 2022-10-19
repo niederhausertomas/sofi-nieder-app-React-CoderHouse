@@ -12,6 +12,7 @@
     width: 150px;
     display: flex;
     object-fit: contain;
+    margin-right: 40px;
 }
 
 .cartContent{
