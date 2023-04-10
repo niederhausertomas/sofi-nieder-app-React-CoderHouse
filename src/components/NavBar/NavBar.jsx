@@ -50,7 +50,7 @@ const NavBar = ()=>{
                                 </NavLink>
                             </li>
                             <li className="nav-item">
-                                <NavLink to={`/category/5`} className="nav-link active">
+                                <NavLink to={`/about`} className="nav-link active">
                                 About us
                                 </NavLink>
                             </li>

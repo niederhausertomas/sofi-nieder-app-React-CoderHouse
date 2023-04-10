@@ -12,21 +12,6 @@ import Checkout from "./components/Checkout/Checkout";
 
 function App() {
   return (
-/*Chicxs mis recomendaciones para la entrega son:
-
--Tener las funcionalidades vistas hasta ahora totalmente funcionando, sin errores ni warnings
-
-Una vez tengan lo que vimos andando perfecto, intenten hacer cosas extras que suman mucho
-
--Hacer el deploy de la app
-
--Mantener el estado del carrito con el localstorage, asi no se pierde el carrito al recargar la página
-
--Usar enviroments varaible para el firebase.config
-
--Permitir editar la cantidad a comprar del producto desde la vista del cart*/
-
-
     <CartProvider>
       <BrowserRouter>
         <NavBar />
@@ -34,7 +19,7 @@ Una vez tengan lo que vimos andando perfecto, intenten hacer cosas extras que su
           <Route exact path="/" element={<ItemListContainer />}/>
           <Route exact path="/item/:id" element={<ItemDetailContainer />}/>
           <Route exact path="/category/:categoria" element={<ItemCategoriaContainer />}/>
-          <Route exact path="/category/5" element={<AboutUs />}/>
+          <Route exact path="/about" element={<AboutUs />}/>
           <Route exact path="/Cart" element={<Cart />}/>
           <Route path={"/checkout"} element={<Checkout />} />
         </Routes>
