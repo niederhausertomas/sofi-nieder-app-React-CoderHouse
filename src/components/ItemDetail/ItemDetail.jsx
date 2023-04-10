@@ -2,8 +2,7 @@ import React from "react";
 import './ItemDetail.css';
 import ItemCount from "../ItemCount/ItemCount";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import { useContext } from "react";
+import { useState, useContext } from "react";
 import { CartContext } from "../CartContext/CartContext";
 
 const ItemDetail = ({producto})=>{
@@ -18,6 +17,7 @@ const ItemDetail = ({producto})=>{
         setCarrito(true);
     }
 
+    
     return (   
         <div className="cardo mb-3" >
             <div className="row g-0">
